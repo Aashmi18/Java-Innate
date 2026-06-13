@@ -1,0 +1,447 @@
+1// username and password
+
+
+import java.util.HashMap;
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        HashMap<String, String> users = new HashMap<>();
+        System.out.print("Enter Username: ");
+        String username = sc.nextLine();
+        System.out.print("Enter Password: ");
+        String password = sc.nextLine();
+        users.put(username, password);
+        System.out.println("\nStored Data:");
+        System.out.println("Username: " + username);
+        System.out.println("Password: " + users.get(username));
+    }
+}
+
+
+2// insert,Update and delete 
+
+
+import java.util.HashMap;
+public class Main {
+    public static void main(String[] args) {
+        HashMap<Integer, String> map = new HashMap<>();
+        map.put(1, "aashmi");
+        map.put(2, "brinda");
+        map.put(3, "karthigaa");
+        System.out.println("Insert: " + map);
+        map.put(1, "mahe");
+        System.out.println("Update: " + map);
+        map.remove(2);
+        System.out.println("Remove: " + map);
+    }
+}
+
+
+
+3// HashMap Builder
+
+//put()
+import java.util.HashMap;
+public class Main {
+    public static void main(String[] args) {
+        HashMap<String,String> map = new HashMap<>();
+        map.put("Saravana", "1234");
+        System.out.println(map);
+    }
+}
+
+4// get()
+import java.util.HashMap;
+public class Main {
+    public static void main(String[] args) {
+        HashMap<String,String> map = new HashMap<>();
+        map.put("Saravana", "1234");
+        System.out.println(map.get("Saravana"));
+    }
+}
+
+5//containsKey()
+import java.util.HashMap;
+public class Main {
+    public static void main(String[] args) {
+        HashMap<String,String> map = new HashMap<>();
+        map.put("Saravana", "1234");
+        System.out.println(map.containsKey("Saravana"));
+    }
+}
+
+6//containsValue()
+import java.util.HashMap;
+public class Main {
+    public static void main(String[] args) {
+        HashMap<String,String> map = new HashMap<>();
+        map.put("Saravana", "1234");
+        System.out.println(map.containsValue("1234"));
+    }
+}
+
+
+7// size()
+import java.util.HashMap;
+public class Main {
+    public static void main(String[] args) {
+        HashMap<String,String> map = new HashMap<>();
+        map.put("A", "1");
+        map.put("B", "2");
+        System.out.println(map.size());
+    }
+}
+
+
+8//keySet()
+import java.util.HashMap;
+public class Main {
+    public static void main(String[] args) {
+        HashMap<String,String> map = new HashMap<>();
+        map.put("A", "1");
+        map.put("B", "2");
+        System.out.println(map.keySet());
+    }
+}
+
+9//values()
+import java.util.HashMap;
+public class Main {
+    public static void main(String[] args) {
+        HashMap<String,String> map = new HashMap<>();
+        map.put("A", "1");
+        map.put("B", "2");
+        System.out.println(map.values());
+    }
+}
+
+
+10//entrySet()
+import java.util.HashMap;
+public class Main {
+    public static void main(String[] args) {
+        HashMap<String,String> map = new HashMap<>();
+        map.put("A", "1");
+        map.put("B", "2");
+        System.out.println(map.entrySet());
+    }
+}
+
+
+11// remove()
+import java.util.HashMap;
+public class Main {
+    public static void main(String[] args) {
+        HashMap<String,String> map = new HashMap<>();
+        map.put("A", "1");
+        map.remove("A");
+        System.out.println(map);
+    }
+}
+
+
+12// isEmpty()
+import java.util.HashMap;
+public class Main {
+    public static void main(String[] args) {
+        HashMap<String,String> map = new HashMap<>();
+        System.out.println(map.isEmpty());
+    }
+}
+
+13// clear()
+
+import java.util.HashMap;
+public class Main {
+    public static void main(String[] args) {
+        HashMap<String,String> map = new HashMap<>();
+        map.put("A", "1");
+        map.clear();
+        System.out.println(map);
+    }
+}
+
+14//clone()
+
+import java.util.HashMap;
+public class Main {
+    public static void main(String[] args) {
+        HashMap<String,String> map = new HashMap<>();
+        map.put("A", "1");
+        HashMap<String,String> copy =
+                (HashMap<String,String>) map.clone();
+        System.out.println(copy);
+    }
+}
+
+15//compute()
+
+import java.util.HashMap;
+public class Main {
+    public static void main(String[] args) {
+        HashMap<String,Integer> map = new HashMap<>();
+        map.put("A", 10);
+        map.compute("A", (k,v) -> v + 5);
+        System.out.println(map);
+    }
+}
+
+16// computeIfAbsent()
+
+import java.util.HashMap;
+public class Main {
+    public static void main(String[] args) {
+        HashMap<String,Integer> map = new HashMap<>();
+        map.computeIfAbsent("A", k -> 100);
+        System.out.println(map);
+    }
+}
+17// merge()
+
+import java.util.HashMap;
+public class Main {
+    public static void main(String[] args) {
+        HashMap<String,Integer> map = new HashMap<>();
+        map.put("A", 10);
+        map.merge("A", 5, (oldVal,newVal) -> oldVal + newVal);
+        System.out.println(map);
+    }
+}
+
+18// putAll()
+
+import java.util.HashMap;
+public class Main {
+    public static void main(String[] args) {
+        HashMap<String,String> map1 = new HashMap<>();
+        HashMap<String,String> map2 = new HashMap<>();
+        map1.put("A", "1");
+        map1.put("B", "2");
+        map2.putAll(map1);
+        System.out.println(map2);
+    }
+}
+
+
+19//remove
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        HashMap<String, String> map = new HashMap<>();
+        System.out.print("Enter Username: ");
+        String user = sc.nextLine();
+        System.out.print("Enter Password: ");
+        String pass = sc.nextLine();
+        map.put(user, pass);
+        System.out.println("Before Remove: " + map);
+        System.out.print("Enter Username to Remove: ");
+        String removeUser = sc.nextLine();
+        map.remove(removeUser);
+        System.out.println("After Remove: " + map);
+    }
+}
+
+
+//user input
+
+20//put()
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        HashMap<String,String> map = new HashMap<>();
+        String user = sc.nextLine();
+        String pass = sc.nextLine();
+        map.put(user, pass);
+        System.out.println(map);
+    }
+}
+
+21//get()
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        HashMap<String,String> map = new HashMap<>();
+        map.put("Saravana","1234");
+        String user = sc.nextLine();
+        System.out.println(map.get(user));
+    }
+}
+
+
+22//containsKey()
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        HashMap<String,String> map = new HashMap<>();
+        map.put("Saravana","1234");
+        String user = sc.nextLine();
+        System.out.println(map.containsKey(user));
+    }
+}
+
+
+
+23//containsValue()
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        HashMap<String,String> map = new HashMap<>();
+        map.put("Saravana","1234");
+        String pass = sc.nextLine();
+        System.out.println(map.containsValue(pass));
+    }
+}
+
+
+24//size()
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        HashMap<String,String> map = new HashMap<>();
+        map.put("A","1");
+        map.put("B","2");
+        System.out.println(map.size());
+    }
+}
+
+
+25//keySet()
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        HashMap<String,String> map = new HashMap<>();
+        map.put("A","1");
+        map.put("B","2");
+        System.out.println(map.keySet());
+    }
+}
+
+
+26//values()
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        HashMap<String,String> map = new HashMap<>();
+        map.put("A","1");
+        map.put("B","2");
+        System.out.println(map.values());
+    }
+}
+
+
+27//entrySet()
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        HashMap<String,String> map = new HashMap<>();
+        map.put("A","1");
+        map.put("B","2");
+        System.out.println(map.entrySet());
+    }
+}
+
+
+28//remove()
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        HashMap<String,String> map = new HashMap<>();
+        map.put("Saravana","1234");
+        String user = sc.nextLine();
+        map.remove(user);
+        System.out.println(map);
+    }
+}
+
+
+
+29//isEmpty()
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        HashMap<String,String> map = new HashMap<>();
+        System.out.println(map.isEmpty());
+    }
+}
+
+
+30//clear()
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        HashMap<String,String> map = new HashMap<>();
+        map.put("A","1");
+        map.clear();
+        System.out.println(map);
+    }
+}
+
+
+31//clone()
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        HashMap<String,String> map = new HashMap<>();
+        map.put("A","1");
+        HashMap<String,String> copy =
+            (HashMap<String,String>) map.clone();
+        System.out.println(copy);
+    }
+}
+
+
+32//compute()
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        HashMap<String,Integer> map = new HashMap<>();
+        map.put("Mark",50);
+        map.compute("Mark",(k,v)->v+10);
+        System.out.println(map);
+    }
+}
+
+
+33//computeIfAbsent()
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        HashMap<String,Integer> map = new HashMap<>();
+        map.computeIfAbsent("Mark",k->100);
+        System.out.println(map);
+    }
+}
+
+
+34//merge()
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        HashMap<String,Integer> map = new HashMap<>();
+        map.put("Mark",50);
+        map.merge("Mark",20,(a,b)->a+b);
+        System.out.println(map);
+    }
+}
+
+
+35//putAll()
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        HashMap<String,String> map1 = new HashMap<>();
+        HashMap<String,String> map2 = new HashMap<>();
+        map1.put("A","1");
+        map1.put("B","2");
+        map2.putAll(map1);
+        System.out.println(map2);
+    }
+}
