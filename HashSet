@@ -1,0 +1,129 @@
+1// Hashset add
+
+import java.util.HashSet;
+public class Main {
+    public static void main(String[] args) {
+        HashSet<String> set = new HashSet<>();
+        set.add("Apple");
+        set.add("Banana");
+        set.add("Mango");
+        System.out.println(set);
+    }
+}
+
+
+2// HashSet add and remove
+
+
+import java.util.HashSet;
+public class Main {
+    public static void main(String[] args) {
+        HashSet<String> set = new HashSet<>();
+        set.add("Apple");
+        set.add("Banana");
+        set.add("Mango");
+        System.out.println("After adding: " + set);
+        set.remove("Banana");
+        System.out.println("After removing: " + set);
+    }
+}
+
+
+3//Enum
+
+
+import java.util.EnumSet;
+enum Day {
+    MONDAY, TUESDAY, WEDNESDAY
+}
+public class Main {
+    public static void main(String[] args) {
+        EnumSet<Day> set = EnumSet.noneOf(Day.class);
+        set.add(Day.MONDAY);
+        set.add(Day.TUESDAY);
+        System.out.println(set);
+        set.remove(Day.MONDAY);
+        System.out.println(set);
+    }
+}
+
+
+4//Tree
+
+
+import java.util.TreeSet;
+public class Main {
+    public static void main(String[] args) {
+        TreeSet<String> set = new TreeSet<>();
+        set.add("Apple");
+        set.add("Banana");
+        set.add("Mango");
+        System.out.println(set);
+        set.remove("Banana");
+        System.out.println(set);
+    }
+}
+
+
+
+5//LinkedHash
+
+
+import java.util.LinkedHashSet;
+public class Main {
+    public static void main(String[] args) {
+        LinkedHashSet<String> set = new LinkedHashSet<>();
+        set.add("Apple");
+        set.add("Banana");
+        set.add("Mango");
+        System.out.println(set);
+        set.remove("Banana");
+        System.out.println(set);
+    }
+}
+
+
+6//HashBuilder
+
+
+import java.util.HashSet;
+public class Main {
+    public static void main(String[] args) {
+        HashSet<String> set1 = new HashSet<>();
+        HashSet<String> set2 = new HashSet<>();
+        set1.add("Apple");
+        set1.add("Banana");
+        set2.add("Mango");
+        set2.add("Orange");
+        set1.addAll(set2);
+        System.out.println("After addAll: " + set1);
+        System.out.println("HashCode: " + set1.hashCode());
+        System.out.println("Is Empty: " + set1.isEmpty());
+        set1.remove("Banana");
+        System.out.println("After remove: " + set1);
+        set1.removeAll(set2);
+        System.out.println("After removeAll: " + set1);
+        set1.add("Apple");
+        set1.add("Grapes");
+        set2.clear();
+        set2.add("Apple");
+        set2.add("Mango");
+        set1.retainAll(set2);
+        System.out.println("After retainAll: " + set1);
+        System.out.println("Size: " + set1.size());
+    }
+}
+
+
+
+7//HashCode
+
+import java.util.HashSet;
+public class Main {
+    public static void main(String[] args) {
+        HashSet<String> set = new HashSet<>();
+        set.add("Apple");
+        set.add("Banana");
+        System.out.println(set.hashCode());
+    }
+}
